@@ -17,6 +17,9 @@ class PostsController < ApplicationController
   end
 
   def checked
+    
+    # binding.pry  # paramsとしてidが届いているか確認する。止まったら、paramsと入力！
+
     post = Post.find(params[:id])
     if post.checked then
       post.update(checked: false)
